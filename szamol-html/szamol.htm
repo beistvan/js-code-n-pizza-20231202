@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Cím szöveg</title>
+  </head>
+  <body>
+    <p id="szoveg">Szöveg</p>
+    <div id="szamol">Számol</div>
+    <script>
+      let s = document.getElementById("szoveg").innerHTML;
+      console.log(s);
+      document.getElementById("szamol").innerHTML = 3 + 2;
+    </script>
+  </body>
+</html>
