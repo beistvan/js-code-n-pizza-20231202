@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <script>
+      function handleSum(event) {
+        console.log(event.srcElement.id);
+        if (event.key == "Enter" || event.srcElement.id == "osszeadGomb") {
+           var elsoSzam = document.getElementById('elsoSzam').value;
+           var masodikSzam = document.getElementById('masodikSzam').value;
+           document.getElementById('eredmeny').innerHTML =
+             +(isNaN(elsoSzam) ? 0 : elsoSzam) + (+(isNaN(masodikSzam) ? 0 : masodikSzam));
+        }
+      }
+    </script>
+    <title>Összeadás</title>
+  </head>
+  <body>
+    <div style="width: 175px; border: 1px solid dimgray; padding: 10px; background-color: lightgray;">
+      <p id="szoveg"><b>Összeadás</b></p>
+      <input type="text" id="elsoSzam" style="width: 170px;" onKeyPress="handleSum(event)"> <br>
+      <input type="text" id="masodikSzam" style="width: 170px;" onKeyPress="handleSum(event)"> <br>
+      <button onClick="handleSum(event)" id="osszeadGomb" style="float: right; margin-top:2px;">
+      Összead
+      </button> <br>
+      <div><i><b>Összeg:</b></i> <span id="eredmeny"></span></div>
+    </div>
+    <script src="szamol.js"></script>
+  </body>
+</html>
